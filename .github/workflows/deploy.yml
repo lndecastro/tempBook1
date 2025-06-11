@@ -26,8 +26,8 @@ jobs:
       - name: Build Jupyter Book
         run: |
           cd tempBook1
-          jupyter-book build .
+          jupyter-book build tempBook1
 
       - name: Deploy to GitHub Pages
         run: |
-          ghp-import -n -p -f _build/html
+          ghp-import -n -p -f tempBook1/_build/html

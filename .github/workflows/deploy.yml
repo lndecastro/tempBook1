@@ -3,7 +3,7 @@ name: Deploy Jupyter Book to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change if your default branch is different
+      - main # Change if your default branch is different
 
 jobs:
   build-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -25,9 +25,9 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
+          cd tempBook1
           jupyter-book build .
 
       - name: Deploy to GitHub Pages
         run: |
-          ghp-import -n -p -f tempBook1/_build/html  
-        # Change 'tempBook1' to changed title
+          ghp-import -n -p -f _build/html

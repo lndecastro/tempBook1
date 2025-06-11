@@ -26,7 +26,7 @@ jobs:
       - name: Build Jupyter Book
         run: |
           cd tempBook1
-          jupyter-book build tempBook1
+          jupyter-book build .
 
       - name: Deploy to GitHub Pages
         run: |
